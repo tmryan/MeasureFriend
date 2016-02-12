@@ -1,0 +1,94 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    tools:context="com.tomartryan.measurefriend.MainActivity" >
+
+    <TableRow
+        android:id="@+id/row1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp" >
+
+        <Button
+            android:id="@+id/btnConvertFrom"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="5"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:text="@string/btnConvertFrom" />
+
+        <TextView
+            android:id="@+id/txtToType"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/txtToType" />
+
+        <Button
+            android:id="@+id/btnConvertTo"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="5"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:text="@string/btnConvertTo" />
+
+    </TableRow>
+    
+    <TableRow
+    	android:id="@+id/row2"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:padding="5dp" >
+
+		<EditText
+	        android:id="@+id/numEntry"
+	        android:layout_width="match_parent"
+	        android:layout_height="50dp"
+	        android:layout_weight="1"
+	        android:gravity="center"
+	        android:ems="10"
+	        android:text="@string/numEntry"
+	        android:inputType="numberSigned" />	  
+	          
+    </TableRow>
+    
+    <TableRow
+    	android:id="@+id/row3"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:padding="5dp" >
+
+	    <Button
+	        android:id="@+id/btnConvert"
+	        android:layout_width="0dp"
+	        android:layout_height="75dp"
+	        android:layout_weight="1"
+	        android:gravity="center"
+	        android:text="@string/btnConvert" />
+	
+	</TableRow>
+    
+	<TableRow
+    	android:id="@+id/row4"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:padding="5dp" >
+	    
+	    <TextView
+	        android:id="@+id/numResult"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:gravity="center"
+	        android:text="@string/numResult"
+	        android:textAppearance="?android:attr/textAppearanceLarge" />
+	    
+	</TableRow>
+</TableLayout>

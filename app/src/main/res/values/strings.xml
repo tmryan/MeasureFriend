@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MeasureFriend</string>
+    <string name="action_settings">Settings</string>
+    <string name="btnConvert">Go!</string>
+    <string name="numResult">Result</string>
+    <string name="numEntry">Please enter an amount</string>
+    <string name="txtToType">-></string>
+    
+    <string name="btnCups">Cups</string>
+    <string name="btnTbspn">Tablespoon (tbsp)</string>
+    <string name="btnTspn">Teaspoon (tsp)</string>
+    <string name="btnGallon">Gallon</string>
+    <string name="btnPint">Pint</string>
+	<string name="btnQuart">Quart</string>
+	<string name="btnConvertFrom">From</string>
+	<string name="btnConvertTo">To</string>    
+	<string name="btnLiter">Liter (L)</string>
+	<string name="btnMililiter">Mililiter (ml)</string>
+	<string name="btnFlOz">Fluid Oz (fl oz)</string>
+	<string name="btnTemperature">Temperature</string>
+	
+</resources>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?><LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    tools:context="com.tmryan.measurefriend.PickerActivity" >
+
+    <TextView
+        android:id="@+id/txtPickerOrigin"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:padding="10dp"
+        android:text="" />
+
+    <Button
+        android:id="@+id/btnGallon"
+        android:layout_width="309dp"
+        android:layout_height="wrap_content"
+        android:text="@string/btnGallon" />
+
+    <Button
+        android:id="@+id/btnQuart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btnQuart" />
+
+    <Button
+        android:id="@+id/btnPint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btnPint" />
+
+    <Button
+        android:id="@+id/btnCups"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btnCups" />
+
+    <Button
+        android:id="@+id/btnTbspn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btnTbspn" />
+
+    <Button
+        android:id="@+id/btnTspn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btnTspn" />
+
+    <Button
+        android:id="@+id/btnLiter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btnLiter" />
+    
+     <Button
+        android:id="@+id/btnMililiter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btnMililiter" />
+        
+     <Button
+         android:id="@+id/btnFlOz"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="@string/btnFlOz" />
+
+<!--      <Button
+         android:id="@+id/btnTemperature"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="@string/btnTemperature" /> -->
+
+</LinearLayout>
