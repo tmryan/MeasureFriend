@@ -21,10 +21,10 @@
             android:textSize="20sp"
             android:text="@string/btnConvertFrom" />
 
-        <TextView
-            android:id="@+id/txtToType"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
+        <Button
+            android:id="@+id/btnSwap"
+            android:layout_width="30dp"
+            android:layout_height="60dp"
             android:layout_weight="1"
             android:gravity="center"
             android:text="@string/txtToType" />
@@ -55,7 +55,7 @@
 	        android:gravity="center"
 	        android:ems="10"
 	        android:text="@string/numEntry"
-	        android:inputType="numberSigned" />	  
+	        android:inputType="numberDecimal" />
 	          
     </TableRow>
     

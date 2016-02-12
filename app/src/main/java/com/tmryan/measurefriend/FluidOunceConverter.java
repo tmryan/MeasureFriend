@@ -3,7 +3,7 @@ package com.tmryan.measurefriend;
 public class FluidOunceConverter {
 
 	// self conversion
-	public static String toFlOz(String numEntry) {
+	public static String toFluidOunce(String numEntry) {
 		return numEntry;
 	}
 	
@@ -23,12 +23,12 @@ public class FluidOunceConverter {
 	}
 	// to tablespoon = 2
 	public static String toTbsp(String numEntry) {
-		return String.valueOf(Integer.valueOf(numEntry) * 2);
+		return String.valueOf(Double.valueOf(numEntry) * 2);
 	}
 	
 	// to teaspoon = 6
 	public static String toTsp(String numEntry) {
-		return String.valueOf(Integer.valueOf(numEntry) * 6);
+		return String.valueOf(Double.valueOf(numEntry) * 6);
 	}
 	
 	// to liter = .0295735
@@ -37,7 +37,7 @@ public class FluidOunceConverter {
 	}
 	
 	// to ml = 29.5735
-	public static String toMl(String numEntry) {
+	public static String toMililiter(String numEntry) {
 		return String.valueOf(Double.valueOf(numEntry) * 9.5735);
 	}
 	

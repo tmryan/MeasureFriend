@@ -2,7 +2,7 @@ package com.tmryan.measurefriend;
 
 /////////////////////////////////
 // Author: Thomas M. Ryan
-// Last Update: 2/12/2016
+// Last Update: 6/8/2016
 //////////////////////////////
 
 import android.app.Activity;
@@ -15,7 +15,7 @@ public class PickerActivity extends Activity {
 
 	private boolean destination;
 	
-    @Override
+    	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_picker);
@@ -23,16 +23,16 @@ public class PickerActivity extends Activity {
 		destination = getIntent().getBooleanExtra("dest", true);
 
         //Note: Not functioning currently
-//		TextView originText = (TextView)findViewById(R.id.txtPickerOrigin);
+//	TextView originText = (TextView)findViewById(R.id.txtPickerOrigin);
 		
-//		if (destination) {
-//			originText.setText("Pick type to convert from:");
-//		} else {
-//			originText.setText("Pick type to convert to:");
-//		}
+//	if (destination) {
+//		originText.setText("Pick type to convert from:");
+//	} else {
+//		originText.setText("Pick type to convert to:");
+//	}
 
         //So many buttons
-		Button gallonBtn = (Button)findViewById(R.id.btnGallon);
+	Button gallonBtn = (Button)findViewById(R.id.btnGallon);
         Button quartBtn = (Button)findViewById(R.id.btnQuart);
         Button pintBtn = (Button)findViewById(R.id.btnPint);
         Button cupBtn = (Button)findViewById(R.id.btnCups);
@@ -189,18 +189,18 @@ public class PickerActivity extends Activity {
 			}
 		});
 
-        mlBtn.setOnClickListener(new View.OnClickListener() {
+		mlBtn.setOnClickListener(new View.OnClickListener() {
 		
 			@Override
 			public void onClick(View v) {
 				Bundle bundle = new Bundle();
 				bundle.putBoolean("dest", destination);
-				bundle.putString("name", "ml");
+				bundle.putString("name", "mililiter");
 				
 				if (destination) {
 					bundle.putString("meth", MililiterConverter.class.getCanonicalName());
 				} else {
-					bundle.putString("meth", "toMl");
+					bundle.putString("meth", "toMililiter");
 				}
 				
 				Intent pickedType = new Intent();
@@ -221,7 +221,7 @@ public class PickerActivity extends Activity {
 				if (destination) {
 					bundle.putString("meth", FluidOunceConverter.class.getCanonicalName());
 				} else {
-					bundle.putString("meth", "toFlOz");
+					bundle.putString("meth", "toFluidOunce");
 				}
 				
 				Intent pickedType = new Intent();
@@ -232,7 +232,7 @@ public class PickerActivity extends Activity {
 		});
 	}
     
-    // Avoiding a crash caused by the hardware back button
+    	// Avoiding a crash caused by the hardware back button
 	@Override
 	public void onBackPressed() {
 		super.onBackPressed();

@@ -3,7 +3,7 @@ package com.tmryan.measurefriend;
 public class MililiterConverter {
 	
 	// self conversion
-	public static String toMl(String numEntry) {
+	public static String toMililiter(String numEntry) {
 		return numEntry;
 	}
 	
@@ -43,7 +43,7 @@ public class MililiterConverter {
 	}
 	
 	// to fluid ounce = 33.814
-	public static String toFlOz(String numEntry) {
+	public static String toFluidOunce(String numEntry) {
 		return String.valueOf(Double.valueOf(numEntry) * .033814);
 	}
 	

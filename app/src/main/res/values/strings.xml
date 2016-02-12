@@ -6,7 +6,7 @@
     <string name="btnConvert">Go!</string>
     <string name="numResult">Result</string>
     <string name="numEntry">Please enter an amount</string>
-    <string name="txtToType">-></string>
+    <string name="txtToType">&lt;-></string>
     
     <string name="btnCups">Cups</string>
     <string name="btnTbspn">Tablespoon (tbsp)</string>

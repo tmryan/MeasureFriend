@@ -38,12 +38,12 @@ public class TspConverter {
 	}
 	
 	// to ml = 4.93
-	public static String toMl(String numEntry) {
+	public static String toMililiter(String numEntry) {
 		return String.valueOf(Double.valueOf(numEntry) * 4.92892);
 	}
 	
 	// to fluid ounce = .166667
-	public static String toFlOz(String numEntry) {
+	public static String toFluidOunce(String numEntry) {
 		return String.valueOf(Double.valueOf(numEntry) * .166667);
 	}
 	

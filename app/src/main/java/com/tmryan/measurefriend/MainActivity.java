@@ -2,7 +2,7 @@ package com.tmryan.measurefriend;
 
 /////////////////////////////////
 // Author: Thomas M. Ryan
-// Last Update: 2/12/2016
+// Last Update: 6/7/2016
 //////////////////////////////
 
 import java.lang.reflect.InvocationTargetException;
@@ -26,9 +26,9 @@ public class MainActivity extends Activity {
 	private String fromType;
 	private String toType;
 	   
+    /////////////////////
+    // Activity Methods
     /////////////////
-    // MAIN METHODS
-    //////////////
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,12 +40,14 @@ public class MainActivity extends Activity {
         final Button convertBtn = (Button)findViewById(R.id.btnConvert);
         final Button fromBtn = (Button)findViewById(R.id.btnConvertFrom);
         final Button toBtn = (Button)findViewById(R.id.btnConvertTo);
+		final Button swapBtn = (Button) findViewById(R.id.btnSwap);
         
         //Number to convert goes in this field
         final EditText entryField = (EditText)findViewById(R.id.numEntry);
 
         //Disable convert button until types picked
         convertBtn.setEnabled(false);
+		swapBtn.setEnabled(false);
         
         //Click to convert
         convertBtn.setOnClickListener(new View.OnClickListener() {
@@ -89,6 +91,23 @@ public class MainActivity extends Activity {
             }
         });
 
+		// Swap from and to types and button text
+		swapBtn.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				// Swapping button text
+				String temp = fromBtn.getText().toString();
+				fromBtn.setText(toBtn.getText().toString());
+				toBtn.setText(temp);
+
+				// Swapping conversion types
+				// Feels pretty hacky right now, better way?
+				temp = fromType;
+				fromType = "com.tmryan.measurefriend." + toType.substring(2) + "Converter";
+				toType = "to" + temp.substring(25, temp.length()-9);
+			}
+		});
+
     }
 
     @Override
@@ -107,9 +126,9 @@ public class MainActivity extends Activity {
         }
     }
 
-    ///////////////////
-    // HELPER METHODS
-    ////////////////
+    //////////////////
+    // Other Methods
+    //////////////
     
     // Use reflection to call conversion method based on picked types
     private void stringToClass(String amount) {
@@ -145,49 +164,48 @@ public class MainActivity extends Activity {
     // Storing data returned from picker activity
     private void storeBundledData(Bundle bundle){
     	if (bundle.getBoolean("dest")){
-    		this.fromType = bundle.getString("meth");
+    		fromType = bundle.getString("meth");
     	} else {
-    		this.toType = bundle.getString("meth");
+    		toType = bundle.getString("meth");
     	}
     }
 
     // Updates btn text with data from picker activity
-    private void updateMainActivityUI(boolean isFrom, String typeName){
-    	Button fromBtn = (Button)findViewById(R.id.btnConvertFrom);
-    	Button toBtn = (Button)findViewById(R.id.btnConvertTo);
-    	Button convertBtn = (Button)findViewById(R.id.btnConvert);
-    	
-    	// Set 'from' and 'to' button text to picked type
-    	if (isFrom) {
-        	fromBtn.setText(typeName);
-    	} else {
-        	toBtn.setText(typeName);
-    	}
-    	
+    private void updateMainActivityUI(boolean isFrom, String typeName) {
+		Button fromBtn = (Button) findViewById(R.id.btnConvertFrom);
+		Button toBtn = (Button) findViewById(R.id.btnConvertTo);
+		Button convertBtn = (Button) findViewById(R.id.btnConvert);
+		Button swapBtn = (Button) findViewById(R.id.btnSwap);
+
+		// Set 'from' and 'to' button text to picked type
+		if (isFrom) {
+			fromBtn.setText(typeName);
+		} else {
+			toBtn.setText(typeName);
+		}
+
 		// Enable convert button if both types are picked
-		if(!fromBtn.getText().equals("From") && !toBtn.getText().equals("To")) {
-        	convertBtn.setEnabled(true);
-        } else {
-        	convertBtn.setEnabled(false);
-        }
-    }
+		if (!fromBtn.getText().equals("From") && !toBtn.getText().equals("To")) {
+			convertBtn.setEnabled(true);
+			swapBtn.setEnabled(true);
+		} else {
+			convertBtn.setEnabled(false);
+			swapBtn.setEnabled(false);
+		}
+	}
 
     /////////////////
     // OPTIONS MENU
-    //////////////
+    /////////////
     
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml
         int id = item.getItemId();
         if (id == R.id.action_settings) {
             return true;

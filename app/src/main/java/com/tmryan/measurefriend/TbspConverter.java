@@ -29,7 +29,7 @@ public class TbspConverter {
 	
 	// to teaspoon = 3
 	public static String toTsp(String numEntry) {
-		return String.valueOf(Integer.valueOf(numEntry) * 3);
+		return String.valueOf(Double.valueOf(numEntry) * 3);
 	}
 	
 	// to liter = .0147868
@@ -38,12 +38,12 @@ public class TbspConverter {
 	}
 	
 	// to ml = 14.7868
-	public static String toMl(String numEntry) {
+	public static String toMililiter(String numEntry) {
 		return String.valueOf(Double.valueOf(numEntry) * 14.7868);
 	}
 	
 	// to fluid ounce = .5
-	public static String toFlOz(String numEntry) {
+	public static String toFluidOunce(String numEntry) {
 		return String.valueOf(Double.valueOf(numEntry) * .5);
 	}
 	

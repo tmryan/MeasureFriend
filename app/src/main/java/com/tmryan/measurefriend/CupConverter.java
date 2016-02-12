@@ -24,12 +24,12 @@ public class CupConverter {
 	
 	//to tablespoon = 16
 	public static String toTbsp(String numEntry) {
-		return String.valueOf(Integer.valueOf(numEntry) * 16);
+		return String.valueOf(Double.valueOf(numEntry) * 16);
 	}
 	
 	//to teaspoon = 48
 	public static String toTsp(String numEntry) {
-		return String.valueOf(Integer.valueOf(numEntry) * 48);
+		return String.valueOf(Double.valueOf(numEntry) * 48);
 	}
 	
 	//to liter = .236588
@@ -38,13 +38,13 @@ public class CupConverter {
 	}
 	
 	//to ml = 236.588
-	public static String toMl(String numEntry) {
+	public static String toMililiter(String numEntry) {
 		return String.valueOf(Double.valueOf(numEntry) * 236.588);
 	}
 	
 	//to fluid ounce = 8
-	public static String toFlOz(String numEntry) {
-		return String.valueOf(Integer.valueOf(numEntry) * 8);
+	public static String toFluidOunce(String numEntry) {
+		return String.valueOf(Double.valueOf(numEntry) * 8);
 	}
 	
 }

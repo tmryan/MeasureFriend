@@ -38,12 +38,12 @@ public class LiterConverter {
 	}
 	
 	// to ml = 1000
-	public static String toMl(String numEntry) {
+	public static String toMililiter(String numEntry) {
 		return String.valueOf(Double.valueOf(numEntry) * 1000);
 	}
 	
 	// to fluid ounce = 33.814
-	public static String toFlOz(String numEntry) {
+	public static String toFluidOunce(String numEntry) {
 		return String.valueOf(Double.valueOf(numEntry) * 33.814);
 	}
 	

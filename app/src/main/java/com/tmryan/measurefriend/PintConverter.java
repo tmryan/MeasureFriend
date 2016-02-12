@@ -12,14 +12,14 @@ public class PintConverter {
 		return String.valueOf(Double.valueOf(numEntry) * .5);
 	}
 
-	// to gallon = .0125
+	// to gallon = .125
 	public static String toGallon(String numEntry) {
-		return String.valueOf(Double.valueOf(numEntry) * .0125);
+		return String.valueOf(Double.valueOf(numEntry) * .125);
 	}
 	
 	// to cup = 2
 	public static String toCup(String numEntry) {
-		return String.valueOf(Integer.valueOf(numEntry) * 2);
+		return String.valueOf(Double.valueOf(numEntry) * 2);
 	}
 	
 	// to tablespoon = 32
@@ -29,7 +29,7 @@ public class PintConverter {
 	
 	// to teaspoon = 96
 	public static String toTsp(String numEntry) {
-		return String.valueOf(Integer.valueOf(numEntry) * 96);
+		return String.valueOf(Double.valueOf(numEntry) * 96);
 	}
 	
 	// to liter = .473176
@@ -38,13 +38,13 @@ public class PintConverter {
 	}
 	
 	// to ml = 473.176
-	public static String toMl(String numEntry) {
+	public static String toMililiter(String numEntry) {
 		return String.valueOf(Double.valueOf(numEntry) * 473.176);
 	}
 	
 	// to fluid ounce = 16
-	public static String toFlOz(String numEntry) {
-		return String.valueOf(Integer.valueOf(numEntry) * 16);
+	public static String toFluidOunce(String numEntry) {
+		return String.valueOf(Double.valueOf(numEntry) * 16);
 	}
 	
 }
