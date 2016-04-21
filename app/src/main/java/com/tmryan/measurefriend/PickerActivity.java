@@ -15,7 +15,7 @@ public class PickerActivity extends Activity {
 
 	private boolean destination;
 	
-    @Override
+    	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_picker);
@@ -189,7 +189,7 @@ public class PickerActivity extends Activity {
 			}
 		});
 
-        mlBtn.setOnClickListener(new View.OnClickListener() {
+		mlBtn.setOnClickListener(new View.OnClickListener() {
 		
 			@Override
 			public void onClick(View v) {
@@ -232,7 +232,7 @@ public class PickerActivity extends Activity {
 		});
 	}
     
-    // Avoiding a crash caused by the hardware back button
+    	// Avoiding a crash caused by the hardware back button
 	@Override
 	public void onBackPressed() {
 		super.onBackPressed();
