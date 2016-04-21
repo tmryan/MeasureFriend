@@ -12,9 +12,9 @@ public class PintConverter {
 		return String.valueOf(Double.valueOf(numEntry) * .5);
 	}
 
-	// to gallon = .0125
+	// to gallon = .125
 	public static String toGallon(String numEntry) {
-		return String.valueOf(Double.valueOf(numEntry) * .0125);
+		return String.valueOf(Double.valueOf(numEntry) * .125);
 	}
 	
 	// to cup = 2
