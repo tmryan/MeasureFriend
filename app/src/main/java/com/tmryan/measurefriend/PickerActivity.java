@@ -23,16 +23,16 @@ public class PickerActivity extends Activity {
 		destination = getIntent().getBooleanExtra("dest", true);
 
         //Note: Not functioning currently
-//		TextView originText = (TextView)findViewById(R.id.txtPickerOrigin);
+//	TextView originText = (TextView)findViewById(R.id.txtPickerOrigin);
 		
-//		if (destination) {
-//			originText.setText("Pick type to convert from:");
-//		} else {
-//			originText.setText("Pick type to convert to:");
-//		}
+//	if (destination) {
+//		originText.setText("Pick type to convert from:");
+//	} else {
+//		originText.setText("Pick type to convert to:");
+//	}
 
         //So many buttons
-		Button gallonBtn = (Button)findViewById(R.id.btnGallon);
+	Button gallonBtn = (Button)findViewById(R.id.btnGallon);
         Button quartBtn = (Button)findViewById(R.id.btnQuart);
         Button pintBtn = (Button)findViewById(R.id.btnPint);
         Button cupBtn = (Button)findViewById(R.id.btnCups);
